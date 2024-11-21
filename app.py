@@ -39,7 +39,7 @@ def index():
 def greet(name='Stranger'):
     return render_template("greeting.html", name=name)
 
-@app.route('online-pizza-sh/order', methods=('GET', 'POST'))
+@app.route('/online-pizza-sh/order', methods=('GET', 'POST'))
 def order():
     if request.method == 'POST':
         new_order = {"name": request.form["name"],
